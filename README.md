@@ -1,15 +1,15 @@
 # PCA-with-numpy
 Introduce Principal Component Analysis(PCA) step by step with numpy: <br>
-https://hackmd.io/@TKDOgu_kT3yWnqCyIxb3-Q/HyJr68TJt
+https://hackmd.io/@TKDOgu_kT3yWnqCyIxb3-Q/HyJr68TJt (traditional chinese)
 
 
-import PCA from PCA.py
+## import PCA from PCA.py
 ```
 import numpy as np
 from PCA import PCA
 ```
 
-numpy array as input
+## input of PCA moduel
 ```
 #sample 0 ~ 5
 f0 = [10, 11, 8, 3, 2, 1]
@@ -21,7 +21,7 @@ matrix = np.array([f0,f1,f2,f3])
 pca = PCA(matrix)
 ```
 
-print eigenvectors for each principal component
+## print eigenvectors for each principal component
 ```
 pca.eigenvectors
 
@@ -31,33 +31,33 @@ array([[-0.86889937,  0.24093226,  0.33542894, -0.27286069],
        [ 0.12258356, -0.27715023,  0.85649711,  0.41782021]])
 ```
 
-print eigen values for each principal component
+## print eigen values for each principal component
 ```
 pca.eigen_values
 
 array([120.08515057,  44.27951779,  13.30470227,   1.38896271])
 ```
 
-print variance ratio for each principal component
+## print variance ratio for each principal component
 ```
 pca.PCs
 
 array([0.67064821, 0.24729102, 0.07430373, 0.00775704])
 ```
 
-display the graph of variance ratio for each principal component
+## display the graph of variance ratio for each principal component
 ```
 pca.show_PC_variations()
 ```
 ![](https://i.imgur.com/xLtWCVm.png)
 
-display 2-dim coordinate system with PC0(X) and PC1(Y)
+## display 2-dim coordinate system with PC0(X) and PC1(Y)
 ```
 pca.show_2_PCA(0,1)
 ```
 ![](https://i.imgur.com/wxQs8zo.png)
 
-display 1-dim coordinate system with PC3(X)
+## display 1-dim coordinate system with PC3(X)
 ```
 pca.show_1_PCA(3)
 ```
