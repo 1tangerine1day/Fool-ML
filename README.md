@@ -24,26 +24,23 @@ pca = PCA(matrix)
 ## print eigenvectors for each principal component
 ```
 pca.eigenvectors
-
+```
 array([[-0.86889937,  0.24093226,  0.33542894, -0.27286069],
        [-0.40900889, -0.02568878, -0.35886838,  0.83860915],
        [-0.25039745, -0.92977389, -0.15847275, -0.21842166],
        [ 0.12258356, -0.27715023,  0.85649711,  0.41782021]])
-```
 
 ## print eigen values for each principal component
 ```
 pca.eigen_values
-
-array([120.08515057,  44.27951779,  13.30470227,   1.38896271])
 ```
+array([120.08515057,  44.27951779,  13.30470227,   1.38896271])
 
 ## print variance ratio for each principal component
 ```
 pca.PCs
-
-array([0.67064821, 0.24729102, 0.07430373, 0.00775704])
 ```
+array([0.67064821, 0.24729102, 0.07430373, 0.00775704])
 
 ## display the graph of variance ratio for each principal component
 ```
