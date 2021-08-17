@@ -9,7 +9,7 @@ import numpy as np
 from PCA import PCA
 ```
 
-## input of PCA moduel
+## input of PCA
 ```
 #sample 0 ~ 5
 f0 = [10, 11, 8, 3, 2, 1]
