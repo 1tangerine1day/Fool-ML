@@ -28,7 +28,7 @@ data = np.array([f1, f2])
 dbscan = DBSCAN(data, 3, 1)
 dbscan.show_graph()
 ```
-output:
+output: <br>
 ![](https://i.imgur.com/WOz2aDl.png)
 
 ## for more dim
@@ -39,7 +39,7 @@ dbscan = DBSCAN(data, 50, 1)
 print("It has " +str(dbscan.cluster_count)+ " cluster(s)")
 dbscan.show()
 ```
-output:
+output: <br>
 ```
 It has 6 cluster(s)
 Sample: [22.93015635  7.82619701  4.62407773] Cluster ID 1
