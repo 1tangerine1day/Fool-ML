@@ -6,57 +6,51 @@ https://hackmd.io/@TKDOgu_kT3yWnqCyIxb3-Q/HyJr68TJt (traditional chinese)
 ## import PCA from PCA.py
 ```
 import numpy as np
-from PCA import PCA
+from DBSCAN import DBSCAN
 ```
 
 ## input of PCA
 ```
-#sample 0 ~ 5
-f0 = [10, 11, 8, 3, 2, 1]
-f1 = [6, 4, 5, 3, 0.7, 1]
-f2 = [8, 2, 9, 1.5, 5, 5]
-f3 = [7, 6, 5, 4, 8, 8.5]
-matrix = np.array([f0,f1,f2,f3])
+#sample 0 ~ 11
+f1= np.array([1, 5, 1.5, 8, 1, 9, 7, 8.7, 2.3, 5.5, 7.7, 6.1])
+f2 = np.array([2, 8, 1.8, 8, 0.6, 11, 10, 9.4, 4, 3, 8.8, 7.5])
 
-pca = PCA(matrix)
+plt.scatter(f1, f2)
+plt.show()
 ```
+![](https://i.imgur.com/xJqzU3P.png)
 
-## print eigenvectors for each principal component
-```
-pca.eigenvectors
-```
-array([[-0.86889937,  0.24093226,  0.33542894, -0.27286069], <br>
-       [-0.40900889, -0.02568878, -0.35886838,  0.83860915], <br>
-       [-0.25039745, -0.92977389, -0.15847275, -0.21842166], <br>
-       [ 0.12258356, -0.27715023,  0.85649711,  0.41782021]])
 
-## print eigen values for each principal component
+## 2-dim data
+code:
 ```
-pca.eigen_values
+data = np.array([f1, f2])
+dbscan = DBSCAN(data, 3, 1)
+dbscan.show_graph()
 ```
-array([120.08515057,  44.27951779,  13.30470227,   1.38896271])
+output:
+![](https://i.imgur.com/WOz2aDl.png)
 
-## print variance ratio for each principal component
+## for more dim
+code:
 ```
-pca.PCs
+data = np.random.rand(3,10)*100
+dbscan = DBSCAN(data, 50, 1)
+print("It has " +str(dbscan.cluster_count)+ " cluster(s)")
+dbscan.show()
 ```
-array([0.67064821, 0.24729102, 0.07430373, 0.00775704])
-
-## display the graph of variance ratio for each principal component
+output:
 ```
-pca.show_PC_variations()
+It has 6 cluster(s)
+Sample: [22.93015635  7.82619701  4.62407773] Cluster ID 1
+Sample: [41.8956658  91.36418864 19.83055023] Cluster ID 2
+Sample: [97.03254444 63.48855169 23.68614179] Cluster ID 3
+Sample: [19.86966834 60.23624661 87.03766231] Cluster ID 4
+Sample: [78.44046287 49.70500624 52.5996821 ] Cluster ID 3
+Sample: [81.96498511 81.32456948 77.88320779] Cluster ID 3
+Sample: [83.85706315 35.23914734 15.85233547] Cluster ID 3
+Sample: [96.31910153 55.87853411 89.9429229 ] Cluster ID 3
+Sample: [71.70723944 32.98917153 70.60028239] Cluster ID 3
+Sample: [20.24122881 20.31309653 56.03305737] Cluster ID 5
 ```
-![](https://i.imgur.com/xLtWCVm.png)
-
-## display 2-dim coordinate system with PC0(X) and PC1(Y)
-```
-pca.show_2_PCA(0,1)
-```
-![](https://i.imgur.com/wxQs8zo.png)
-
-## display 1-dim coordinate system with PC3
-```
-pca.show_1_PCA(3)
-```
-![](https://i.imgur.com/qDZPl6c.png)
 
