@@ -1,6 +1,6 @@
-# PCA-with-numpy
-Introduce Principal Component Analysis(PCA) step by step with numpy: <br>
-https://hackmd.io/@TKDOgu_kT3yWnqCyIxb3-Q/HyJr68TJt (traditional chinese)
+# DBSCAN-with-numpy
+Introduce DBscan step by step with numpy: <br>
+
 
 
 ## import PCA from PCA.py
